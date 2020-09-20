@@ -3,13 +3,13 @@ import React from "react";
 import PostListItem from "../post-list-item";
 import "./post-list.css";
 
-const PostList = ({ posts }) => {
+const PostList = ({ posts, deleteItem }) => {
   const elements = posts.map((item) => {
     if (typeof item === "object" && !isEmptyObj(item)) {
       const { id, ...itemProps } = item;
       return (
         <li className="list-group-item" key={id}>
-          <PostListItem {...itemProps} />
+          <PostListItem {...itemProps} deleteItem={() => deleteItem(id)} />
         </li>
       );
     }
