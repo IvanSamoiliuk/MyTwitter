@@ -10,10 +10,13 @@ import "./app.css";
 
 const App = () => {
   const data = [
+    5,
     { id: "qwe1", label: "Выучить HTML и CSS" },
+    false,
     { id: "qwe2", label: "Выучить JS и React", important: true },
     { id: "qwe3", label: "Создать крутую SPA" },
   ];
+
   return (
     <div className="app">
       <AppHeader />
